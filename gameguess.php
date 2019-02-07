@@ -61,8 +61,8 @@ function sum_digits($arr){
 ?>
 
 <label>Result:</label> 
-<textarea rows="1" cols="23" id='txtArea'>
-	<?php echo $final_result ?>
+<textarea rows="1" cols="23" >
+	<?php echo $final_result ?? '' ?>
 </textarea>
 </body>
 </html>
