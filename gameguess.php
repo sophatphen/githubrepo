@@ -10,7 +10,7 @@ $number=null;
 if (isset($_POST['number']))
 	$number=$_POST['number'];
 ?>
-	<p>GAMGE GUESS YOUR PHONE NUMBER!</p>
+	<p>GAME GUESS YOUR PHONE NUMBER!</p>
  	Enter your phone number:
 	<form method="POST">
 		<p><input type="number" name="number" min="010000000" max="999999999" style="width: 200px" value="<?php echo $number?>"</p> 
@@ -28,10 +28,11 @@ if (isset($_POST['number'])) {
 	foreach ($arr_number as $value){
 		$sum_number += $value;
 	}
+	//print_r($sum_number);
 	$result_sum_number = sum_digits(str_split($sum_number));
 	$final_result = result($result_sum_number);
 }
-
+//print_r($result_sum_number);
 function result($result){
 	$results = [
 		1=>'Very Poor',
@@ -49,6 +50,9 @@ function result($result){
 }
 
 function sum_digits($arr){
+	if(count($arr) == 1)
+		return $arr[0];
+	
 	$sum = $arr[0] + $arr[1];
 
 	if(count(str_split($sum)) == 1)
