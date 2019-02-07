@@ -10,7 +10,7 @@ $number=null;
 if (isset($_POST['number']))
 	$number=$_POST['number'];
 ?>
-
+	<p>GAMGE GUESS YOUR PHONE NUMBER!</p>
  	Enter your phone number:
 	<form method="POST">
 		<p><input type="number" name="number" min="010000000" max="999999999" style="width: 200px" value="<?php echo $number?>"</p> 
